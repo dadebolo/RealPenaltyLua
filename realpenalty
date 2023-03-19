@@ -4,6 +4,7 @@ flag_save = 999
 
 function script.update(dt)
 
+-- online funziona!
     physics.overrideRacingFlag(ac.FlagType.FasterCar)
 -- DRS
     drs_enabled = ac.load("rp_drs_enabled")
