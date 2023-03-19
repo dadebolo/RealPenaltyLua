@@ -1,4 +1,3 @@
-flag_save = 999
 
 function script.update(dt)
 
@@ -11,43 +10,3 @@ function script.update(dt)
         end
     end
     
--- Flag - da sistemare!! Rimane memorizzata la bandiera precedente impostata da RP (per esempio la gialla durante SC)
-    flag = ac.load("rp_flag")
-    if flag == nil then
-    else 
---AC_NO_FLAG = 0
---AC_BLUE_FLAG = 1
---AC_YELLOW_FLAG = 2
---AC_BLACK_FLAG = 3
---AC_WHITE_FLAG = 4
---AC_CHECKERED_FLAG = 5
---AC_PENALTY_FLAG = 6        
-        if  flag ~= flag_save then
-            if flag == 0 then
-                lua_flag = ac.FlagType.None
-            elseif flag == 1 then
-                lua_flag = ac.FlagType.FasterCar
-            elseif flag == 2 then
-                lua_flag = ac.FlagType.Caution
-            elseif flag == 3 then
-                lua_flag = ac.FlagType.Stop
-            elseif flag == 4 then
-                lua_flag = ac.FlagType.OneLapLeft
-            elseif flag == 5 then
-                lua_flag = ac.FlagType.Finished
-            elseif flag == 6 then
-                lua_flag = ac.FlagType.ReturnToPits
-            else     
-                lua_flag = nil
-            end 
-            if lua_flag == nil then
-            else 
-                physics.overrideRacingFlag(lua_flag)
-                ac.log("Real Penalty LUA - Flag - " .. lua_flag  .. " - time: " .. os.time())
-            end 
-            flag_save = flag
-        end 
-    end     
-
-end
-
