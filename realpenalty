@@ -43,6 +43,7 @@ function script.update(dt)
             if lua_flag == nil then
             else 
                 physics.overrideRacingFlag(lua_flag)
+                flag_save = flag
             end 
         end 
     end     
