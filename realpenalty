@@ -43,8 +43,9 @@ function script.update(dt)
             if lua_flag == nil then
             else 
                 physics.overrideRacingFlag(lua_flag)
-                flag_save = flag
+                ac.log("Real Penalty LUA - Flag - " .. lua_flag  .. " - time: " .. os.time())
             end 
+            flag_save = flag
         end 
     end     
 
