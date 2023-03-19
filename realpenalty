@@ -10,9 +10,9 @@ function script.update(dt)
     drs_enabled = ac.load("rp_drs_enabled")
     if drs_enabled == nil then
     else
---        if drs_enabled == 0 then
---            ac.setDRS(False)
---        end
+        if drs_enabled == 0 then
+            ac.setDRS(False)
+        end
         if drs_enabled ~= drs_enabled_save then
             ac.log("Real Penalty LUA - DRS enabled - " .. drs_enabled  .. " - time: " .. os.time())
             drs_enabled_save = drs_enabled
