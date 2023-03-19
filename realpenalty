@@ -1,7 +1,5 @@
 
 function script.update(dt)
-
--- DRS
     drs_enabled = ac.load("rp_drs_enabled")
     if drs_enabled == nil then
     else
@@ -9,5 +7,4 @@ function script.update(dt)
             ac.setDRS(False)
         end
     end
-    
 end
