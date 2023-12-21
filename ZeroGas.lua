@@ -5,6 +5,7 @@ function script.update(dt)
     else
         ac.log("zerogas.lua 0001")
 --    ac.accessCarPhysics().gas = 0
+    end        
     ac.log("zerogas.lua 0002")
     ac.log("zerogas.lua 9999")
 end
