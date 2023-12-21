@@ -1,9 +1,5 @@
 function script.update(dt)
-    drs_enabled = ac.load("rp_drs_enabled")
-    if drs_enabled == nil then
-    else
-        if drs_enabled == 0 then
-            ac.setDRS(False)
-        end
-    end
+    ac.log("zerogas.lua 0001")
+    ac.accessCarPhysics().gas = 0
+    ac.log("zerogas.lua 0002")
 end
